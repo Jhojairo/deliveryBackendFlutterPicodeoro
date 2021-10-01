@@ -1,6 +1,6 @@
 
 const db = require('../config/config'); // se exporta la bariable db del archivo config.js
-
+const crypto = require('crypto'),
 const User = ()=>{}; 
 
     User.getAll =  ()=>{
@@ -18,6 +18,8 @@ const User = ()=>{};
 
     
     User.create = (user)=>{
+        const myPasswordHashed = crypto.createHash('md5').update(user.password).digest('hex');
+        user.password=myPasswordHashed;
         const sql = `INSERT INTO 
         users(
             email,
