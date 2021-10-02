@@ -9,4 +9,7 @@ module.exports = (app) => {
     // crear datos  
 
     app.post ('/api/users/create',usersController.register);
+    // login 
+    app.post ('/api/users/login',usersController.login);
+
 }
