@@ -1,9 +1,17 @@
 
 const db = require('../config/config'); // se exporta la bariable db del archivo config.js
+<<<<<<< HEAD
 const crypto =require('crypto');
 const { use } = require('passport');
 
+=======
+<<<<<<< HEAD
+const crypto =require('crypto');
+>>>>>>> 536319cf17d6d27c6c8ac08d2247e88c24393bea
 
+=======
+const crypto = require('crypto'),
+>>>>>>> 1ec531a7528e40af644b2aae708d3302a36b55cc
 const User = ()=>{}; 
 
     User.getAll =  ()=>{
@@ -80,10 +88,21 @@ User.findById = (id, callback) => {
     
 
     User.create = (user)=>{
+<<<<<<< HEAD
         const myPasswordHashed =crypto.createHash('md5').update(user.password).digest('hex');
         user.password=myPasswordHashed;
         
 
+=======
+<<<<<<< HEAD
+        const myPasswordHashed = crypto.createHash('md5').update(user.password
+            ).digest('hex');
+            user.password=myPasswordHashed;
+=======
+        const myPasswordHashed = crypto.createHash('md5').update(user.password).digest('hex');
+        user.password=myPasswordHashed;
+>>>>>>> 1ec531a7528e40af644b2aae708d3302a36b55cc
+>>>>>>> 536319cf17d6d27c6c8ac08d2247e88c24393bea
         const sql = `INSERT INTO 
         users(
             email,
